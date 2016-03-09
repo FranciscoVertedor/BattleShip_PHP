@@ -57,7 +57,6 @@ class Grid
 					for($j=0;$j<$long;$j++){
 						$this->_grid[$distanceShipL][$distanceShipN]='X';
 						$ship->SetPosition($distanceShipL, $distanceShipN);
-						//print_r($this->_grid[$distanceShipL][$distanceShipN]. " fila-> ". $distanceShipL . " col-> ".$distanceShipN );
 						$distanceShipL--;
 					}
 					$distanceShipL = $distanceShipL + $long;
@@ -65,7 +64,7 @@ class Grid
 				}
 			}
 		}
-		else if($orientacion == 2)//West
+		else if($orientation == 2)//West
 		{
 				if($long > ($this->_row - $distanceShipN)){//Grow to West
 					//Check if some box are occupied by other ship
@@ -83,7 +82,6 @@ class Grid
 						for($j=0;$j<$long;$j++){
 							$this->_grid[$distanceShipL][$distanceShipN]='X';
 							$ship->SetPosition($distanceShipL, $distanceShipN);
-							//print_r($this->_grid[$distanceShipL][$distanceShipN]. " fila-> ". $distanceShipL . " col-> ".$distanceShipN );
 							$distanceShipN--;
 						}
 						$distanceShipN = $distanceShipN + $long;
@@ -91,7 +89,7 @@ class Grid
 					}
 				}
 			}
-			else if($orientacion == 3)//South
+			else if($orientation == 3)//South
 			{
 				if($long > ($this->_col - $distanceShipL)){//Grow to north
 					//Check if some box are occupied by other ship
@@ -109,7 +107,6 @@ class Grid
 						for($j=0;$j<$long;$j++){
 							$this->_grid[$distanceShipL][$distanceShipN]='X';
 							$ship->SetPosition($distanceShipL, $distanceShipN);
-							//print_r($this->_grid[$distanceShipL][$distanceShipN]. " fila-> ". $distanceShipL . " col-> ".$distanceShipN );
 							$distanceShipL++;
 						}
 						$distanceShipL = $distanceShipL - $long;
@@ -133,7 +130,6 @@ class Grid
 							for($j=0;$j<$long;$j++){
 								$this->_grid[$distanceShipL][$distanceShipN]='X';
 								$ship->SetPosition($distanceShipL, $distanceShipN);
-								//print_r($this->_grid[$distanceShipL][$distanceShipN]. " fila-> ". $distanceShipL . " col-> ".$distanceShipN );
 								$distanceShipN++;
 							}
 							$distanceShipN = $distanceShipN - $long;
